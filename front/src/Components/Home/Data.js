@@ -9,7 +9,7 @@ const Data = () => {
   const handleDownload = async () => {
     setLoading(true); // Set loading to true at the start
     try {
-      const response = await axios.get('http://localhost:8000/api/download-cv', {
+      const response = await axios.get('https://portfolio-chihab-api.vercel.app/api/download-cv', {
         responseType: 'blob', // Ensures the response is in binary format (blob)
       });
 
