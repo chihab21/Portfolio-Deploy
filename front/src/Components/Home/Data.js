@@ -1,37 +1,26 @@
 import React, { useState } from "react";
 import './Home.css';
 import { FaDownload } from "react-icons/fa";
-import axios from "axios";
 
 const Data = () => {
   const [loading, setLoading] = useState(false);
 
-  const handleDownload = async () => {
-    setLoading(true); // Set loading to true at the start
-    try {
-      const response = await axios.get('https://portfolio-chihab-api.vercel.app/api/download-cv', {
-        responseType: 'blob', // Ensures the response is in binary format (blob)
-      });
-
-      const url = window.URL.createObjectURL(new Blob([response.data]));
-      const link = document.createElement('a');
-      link.href = url;
-      link.setAttribute('download', 'Chihab-Ghlala-CV.pdf'); // Set the filename for download
-      document.body.appendChild(link);
-      link.click();
-      link.remove();
-    } catch (error) {
-      console.error("Error downloading CV:", error);
-    } finally {
-      setLoading(false); // Reset loading to false after download
-    }
+  const handleDownload = () => {
+    setLoading(true);
+    const link = document.createElement('a');
+    link.href = `${process.env.PUBLIC_URL}/Chihab-Ghlala-CV.pdf`; // Path to the CV in the public folder
+    link.setAttribute('download', 'Chihab-Ghlala-CV.pdf');
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+    setLoading(false);
   };
 
   return (
     <div className="home_data">
       <h1 className="home_title">
         Ghlala Chihab
-      <svg
+        <svg
           width="36"
           height="36"
           viewBox="0 0 48 48"
@@ -85,7 +74,12 @@ const Data = () => {
         Software Engineer & Full Stack Developer
       </h3>
 
-      <button className="btn cv-btn" style={{ margin: '25px' }} onClick={handleDownload} disabled={loading}>
+      <button
+        className="btn cv-btn"
+        style={{ margin: '25px' }}
+        onClick={handleDownload}
+        disabled={loading}
+      >
         {loading ? (
           <span>Loading...</span>
         ) : (
