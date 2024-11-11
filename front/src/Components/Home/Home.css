@@ -1,0 +1,244 @@
+.home_container{
+  margin-top: -50px;
+display: flex;
+justify-content: space-evenly;
+align-items: center;
+align-content: center;
+    
+}
+
+
+.home_img {
+  margin-right: 10%;
+  margin-top: 25px;
+    background-image: url('../../assets/me.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 500px;
+    order: 1;
+    justify-self: center;
+    height: 450px;
+  
+  /* Adds a colored border */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Adds smooth transition */
+    animation: profile-animate 8s ease-in-out infinite 1s;
+  }
+  
+  /* Hover effect to enhance the shadow and scale */
+  .home_img:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3), 0 6px 12px rgba(0, 0, 0, 0.15); /* Deeper shadow on hover */
+  }
+  
+  @keyframes profile-animate {
+    0% {
+      border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+      transform: scale(1);
+    }
+    25% {
+      border-radius: 30% 50% 10% 40% / 50% 40% 60% 30%;
+      transform: scale(1.02);
+    }
+    50% {
+      border-radius: 40% 30% 60% 40% / 50% 60% 30% 50%;
+      transform: scale(1.05);
+    }
+    75% {
+      border-radius: 30% 60% 40% 50% / 60% 40% 50% 40%;
+      transform: scale(1.03);
+    }
+    100% {
+      border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+      transform: scale(1);
+    }
+  }
+  
+.home-Scroll{
+  margin: 2% ;
+  
+}
+
+  .home_scroll_button {
+    display: inline-flex;
+color: gray;
+    align-items: center; /* Vertically align the text and icon */
+    justify-content: center; /* Center content horizontally */
+    gap: 8px; /* Add space between icon and text */
+    padding: 12px 24px; /* Add padding for better button size */
+    border-radius: 30px; /* Round the corners */
+    border: 1px solid transparent; /* Remove the default border */
+    cursor: pointer; /* Change cursor on hover */
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+  }
+  
+  .home_scroll_button:hover {
+    transform: translateY(-3px); /* Lift the button on hover */
+  }
+  
+  .home_scroll_button span {
+    font-size: 16px; /* Adjust font size for readability */
+    font-weight: 500; /* Slightly bold the text */
+  }
+  
+  .home_scroll_button svg {
+    font-size: 24px; /* Adjust icon size */
+  }
+  
+
+  .home_data {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    color: #333;
+    margin-right: 10%;
+  }
+  
+  .home_title {
+    font-size: 3.5rem;
+    font-weight: bold;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    border-radius: 50%;
+    padding: 10px;
+  }
+  
+  .home_title svg {
+    margin-left: 0.5rem;
+    transition: transform 0.3s;
+  }
+  
+  .home_title:hover svg {
+    transform: rotate(20deg);
+  }
+  
+  .home_substtle {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #555;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .desc {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #666;
+    max-width: 600px;
+    margin-bottom: 2rem;
+    padding: 0 1rem;
+  }
+  .button {
+    display: inline-flex;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    padding: 0.8rem 1.2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: transform 0.3s;
+    box-shadow: 0px 4px 12px rgba(0, 123, 255, 0.3);
+  
+    /* Adding animated background gradient */
+    background: linear-gradient(45deg, #4a4a4a, #1c1c1c, #000);
+    background-size: 200% 200%;
+    animation: backgroundShift 5s linear infinite;
+  }
+  
+  @keyframes backgroundShift {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  .button:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+  }
+  
+  .button:hover {
+    background-color: var(--text-color);
+    transform: translateY(-3px);
+  }
+  
+  .button__icon {
+    margin-left: 0.5rem;
+    fill: #fff;
+    transition: transform 0.3s;
+  }
+  
+  .button:hover .button__icon {
+    transform: translateX(5px);
+  }
+
+
+  @media (max-width: 768px) {
+    .home_container {
+      flex-direction: column; /* Stack vertically on smaller screens */
+      align-items: center;
+    }
+  
+    .home_img {
+      width: 80%; /* Make image smaller on smaller screens */
+      height: auto; /* Maintain aspect ratio */
+      margin-right: 0;
+    }
+  
+    .home_data {
+      margin-right: 0;
+      padding: 1rem;
+    }
+  
+    .home_title {
+      font-size: 2.5rem; /* Adjust title size */
+    }
+  
+    .desc {
+      font-size: 0.9rem; /* Reduce description font size */
+    }
+  
+    .button {
+      font-size: 0.9rem; /* Make button text smaller */
+    }
+  
+    .home_scroll_button {
+      font-size: 14px;
+      padding: 10px 20px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .home_title {
+      font-size: 2rem; /* Further reduce title size on very small screens */
+    }
+  
+    .desc {
+      font-size: 0.85rem; /* Reduce description font size */
+      padding: 0 0.5rem; /* Adjust padding */
+    }
+  
+    .home_scroll_button {
+      font-size: 12px;
+      padding: 8px 16px; /* Smaller padding on mobile */
+    }
+  
+    .home_img {
+      width: 100%; /* Full width on very small screens */
+      height: 300px; /* Reduce height on very small screens */
+    }
+  }
+  
+  

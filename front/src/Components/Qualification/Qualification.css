@@ -1,0 +1,128 @@
+/* Container styles */
+.qualification-container {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    margin: 40px auto;
+    max-width: 800px;
+    color: #333;
+  }
+  
+  .qualification-container h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: #838990;
+  }
+  
+  .qualification-container p {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 30px;
+  }
+  
+  /* Tabs styles */
+  .qualification-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 30px;
+
+  }
+  
+  .qualification-tab {
+    cursor: pointer;
+   
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-weight: bold;
+    color: #838990;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-size: 1.1em;
+  }
+  
+  .tab-icon {
+    margin-right: 10px;
+    font-size: 1.2em;
+  }
+  
+  .qualification-tab:hover {
+    background-color: #838990;
+    color: white;
+  }
+  
+  .qualification-tab.active {
+    background-color: #005bb5;
+    color: white;
+  }
+  
+  /* Timeline styles */
+  .qualification-timeline {
+    max-width: 700px;
+    margin: 0 auto;
+    margin-left: 30%;
+    margin-top: 50px;
+  }
+  
+  .timeline {
+    position: relative;
+    padding-left: 30px;
+    border-left: 2px solid #ddd;
+  }
+  
+  .timeline-item {
+    position: relative;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: flex-start;
+  }
+  
+  .bulb {
+    width: 16px;
+    height: 16px;
+    background-color: #838990;
+    border-radius: 50%;
+    position: absolute;
+    left: -10px;
+    top: 5px;
+    box-shadow: 0 0 10px rgba(0, 115, 230, 0.6);
+  }
+  
+  .timeline-content {
+    padding-left: 40px;
+    text-align: left;
+    background: #f9f9f9;
+    border-radius: 10px;
+    padding: 15px;
+    transition: transform 0.3s;
+  }
+  
+  .timeline-item:hover .timeline-content {
+    transform: translateX(10px);
+  }
+  
+  .timeline-content h3 {
+    font-size: 1.4em;
+    margin: 0;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .timeline-content p {
+    font-size: 1em;
+    color: #666;
+    margin: 5px 0;
+  }
+  
+  .timeline-date {
+    display: flex;
+    align-items: center;
+    font-size: 0.9em;
+    color: #888;
+  }
+  
+  .timeline-date svg {
+    margin-right: 5px;
+    color: #636970;
+  }
+  
